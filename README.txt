@@ -33,6 +33,29 @@ ENVIRONMENT SETUP:
 1. Create a Python Virtual Environment for the project
 2. Create a Python Virutual Environment for Airflow
 
+AIRFLOW:
+
+1. Start Airflow 
+    airflow standalone    #Run in Dev Server
+
+2. Setup background tunnel
+    ssh -fN -L 8080:localhost:8080 davis01j@ubuntudevserver
+
+
+3. Verify
+    nc -zv localhost 8080  #Run on Mac. should say “open”
+
+4. Open in Browser
+    http://localhost:8080   #Paste in Browswer
+
+
+
+
+
+
+
+
+
 
 SCRIPTS:
 
