@@ -48,6 +48,11 @@ AIRFLOW:
 4. Open in Browser
     http://localhost:8080   #Paste in Browswer
 
+5. Check Airflow username & password
+    cat ~/airflow/simple_auth_manager_passwords.json.generated
+
+
+
 
 
 
