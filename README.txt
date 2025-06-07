@@ -1,8 +1,15 @@
-File Structure: This file structure is optimized for development in Jupyter Notebooks. 
+GENERAL INTENT:
+    1. Create flexible ETL pipelines w/ Airflow to consolidate Whoop and Garmin data exports (CSV & JSON)
+    2. Load data into database.
+    3. Create consolidated table(s) for analysis. 
+    4. Create Endurance (running / biking) and strength programs with Python. Both programs utilize linear progression. 
+    5. Leverage historical physiological data to inform programming during execution. 
+
+Application File: This file structure is optimized for development in Jupyter Notebooks. 
                 Methodology is to use Jupyter Notebook for quick dev and transition to 
                 application scripts quickly. 
 
-
+Tree Diagram: [NEEDS UPDATING AS OF 06/07/2025]
     running-plan-project/
     ├── env/      ← project virtual environment
     ├── airflow-env/      ← airflow virtual environment
@@ -36,14 +43,13 @@ ENVIRONMENT SETUP:
 AIRFLOW:
 
 1. Start Airflow 
-    airflow standalone    #Run in Dev Server
+    airflow standalone    #Run in Dev Server. If run in VSC, will auto prompt to open in Browser.
 
 2. Setup background tunnel
     ssh -fN -L 8080:localhost:8080 davis01j@ubuntudevserver
 
-
 3. Verify
-    nc -zv localhost 8080  #Run on Mac. should say “open”
+    nc -zv localhost 8080  #Run on local machine.Should say "open."
 
 4. Open in Browser
     http://localhost:8080   #Paste in Browswer
